@@ -13,7 +13,6 @@ export default class controller{
 
     onChangeCallback() {
         document.querySelector('#editor').innerHTML = this.view.toHtml();
-        console.log("onchange");
     }
 
     onChangeColor(selectedObj){
@@ -22,7 +21,6 @@ export default class controller{
     }
     onChangeRegister(selectedObj){
         let value = selectedObj.target.options[selectedObj.target.options.selectedIndex].value;
-        console.log(value);
         this.model.setRegister(value);
     }
     onClickBold(){
@@ -36,7 +34,6 @@ export default class controller{
     }
     onSetText(obj){
         let value = obj.target.value;
-        console.log(obj);
         this.model.setText(value);
     }
 }
